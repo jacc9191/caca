@@ -1,0 +1,39 @@
+[debug] [2025-06-14T15:14:48.249Z] ----------------------------------------------------------------------
+[debug] [2025-06-14T15:14:48.254Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --project moda-e6092
+[debug] [2025-06-14T15:14:48.255Z] CLI Version:   14.7.0
+[debug] [2025-06-14T15:14:48.255Z] Platform:      win32
+[debug] [2025-06-14T15:14:48.255Z] Node Version:  v22.15.1
+[debug] [2025-06-14T15:14:48.256Z] Time:          Sat Jun 14 2025 10:14:48 GMT-0500 (hora estándar de Colombia)
+[debug] [2025-06-14T15:14:48.256Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-14T15:14:48.526Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-14T15:14:48.527Z] > authorizing via signed-in user (jacc9121@gmail.com)
+[debug] [2025-06-14T15:14:48.527Z] [iam] checking project moda-e6092 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-14T15:14:48.528Z] Checked if tokens are valid: false, expires at: 1749914849309
+[debug] [2025-06-14T15:14:48.529Z] Checked if tokens are valid: false, expires at: 1749914849309
+[debug] [2025-06-14T15:14:48.529Z] > refreshing access token with scopes: []
+[debug] [2025-06-14T15:14:48.531Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-14T15:14:48.531Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-14T15:14:48.848Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-06-14T15:14:48.848Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-14T15:14:48.874Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/moda-e6092:testIamPermissions [none]
+[debug] [2025-06-14T15:14:48.874Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/moda-e6092:testIamPermissions x-goog-quota-user=projects/moda-e6092
+[debug] [2025-06-14T15:14:48.874Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/moda-e6092:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-14T15:14:49.566Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/moda-e6092:testIamPermissions 200
+[debug] [2025-06-14T15:14:49.566Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/moda-e6092:testIamPermissions {}
+[debug] [2025-06-14T15:14:49.566Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project moda-e6092:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2025-06-14T15:14:49.567Z] Checked if tokens are valid: true, expires at: 1749917687849
+[debug] [2025-06-14T15:14:49.567Z] Checked if tokens are valid: true, expires at: 1749917687849
+[debug] [2025-06-14T15:14:49.568Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/moda-e6092 [none]
+[debug] [2025-06-14T15:14:49.984Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/moda-e6092 403
+[debug] [2025-06-14T15:14:49.984Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/moda-e6092 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-06-14T15:14:49.985Z] Request to https://firebase.googleapis.com/v1beta1/projects/moda-e6092 had HTTP Error: 403, The caller does not have permission
+[debug] [2025-06-14T15:14:50.174Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/moda-e6092 had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project moda-e6092. Please make sure the project exists and your account has permission to access it.
