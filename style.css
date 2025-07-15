@@ -193,23 +193,27 @@ header h1 {
 
 .contenedor-img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; /* Cuadrado responsivo */
   overflow: hidden;
   border-radius: 12px;
   background-color: #f8f8f8;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0; /* Asegúrate de que no tenga padding */
+  box-sizing: border-box;
 }
-
 
 .contenedor-img img.main-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ✅ Muestra toda la imagen sin recortar */
+  object-fit: contain; /* ✅ Muestra toda la imagen completa */
   object-position: center;
   display: block;
-  background-color: #fff; /* Opcional: para fondo blanco si sobra espacio */
+  background-color: #fff;
+  margin: 0; /* 👈 importante en móviles */
+  padding: 0;
+  border: 0;
 }
 
 
@@ -430,7 +434,7 @@ button:hover {
   display: block;
   margin: 1.2rem auto 0;
   background: #000;
-  color: #f90d0d;
+  color: #f90d0d;  /*blanco*/
   border-radius: var(--borde-radius);
 
   max-width: 280px;
