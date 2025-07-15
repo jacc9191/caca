@@ -430,7 +430,7 @@ button:hover {
   display: block;
   margin: 1.2rem auto 0;
   background: #000;
-  color: #fff;
+  color: #f90d0d;
   border-radius: var(--borde-radius);
 
   max-width: 280px;
@@ -446,6 +446,7 @@ button:hover {
 /* ===================================
    🛒 CARRITO
 =================================== */
+
 .icono-carrito-fijo {
   position: fixed;
   top: 56px;
@@ -454,7 +455,6 @@ button:hover {
   height: 47px;
   font-size: 1.6rem;
   background-color: #000000;
- 
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -467,7 +467,7 @@ button:hover {
 
 .icono-carrito-fijo.ver-carrito:hover {
   background-color: #313030;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 .icono-carrito-fijo.ocultar-carrito:hover {
@@ -475,6 +475,7 @@ button:hover {
   color: #131aeb;
 }
 
+/* 🧾 Panel del carrito */
 #bloqueCarrito.container {
   position: fixed;
   top: 0;
@@ -490,10 +491,12 @@ button:hover {
   transform: translateX(100%); /* Oculto por defecto */
 }
 
+/* Mostrar carrito */
 #bloqueCarrito.container.mostrar {
-  transform: translateX(0); /* Visible cuando tiene .mostrar */
+  transform: translateX(0);
 }
 
+/* Ocultar carrito completamente */
 #bloqueCarrito.container.oculto {
   display: none;
 }
@@ -509,10 +512,10 @@ button:hover {
 }
 
 .cerrar-carrito:hover {
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
-
+/* Total del carrito */
 .total-carrito {
   text-align: right;
   font-size: 1.2rem;
@@ -525,6 +528,7 @@ button:hover {
   color: #28a745;
 }
 
+/* Estilos para los items dentro del carrito */
 .item-carrito-elegante .info-superior {
   display: flex;
   justify-content: space-between;
@@ -536,15 +540,12 @@ button:hover {
   font-size: 1.1rem;
 }
 
-
-
-/* ✅ Corrección visual para precios recortados en el carrito móvil */
 .item-carrito-elegante p {
+  font-size: 1rem;
+  max-width: 100%;
   white-space: nowrap;
   overflow: visible;
   text-overflow: unset;
-  font-size: 1rem;
-  max-width: 100%;
 }
 
 .item-carrito-elegante strong {
@@ -553,6 +554,7 @@ button:hover {
   max-width: 100%;
 }
 
+/* Corrección para pantallas pequeñas */
 @media (max-width: 480px) {
   .item-carrito-elegante p {
     white-space: normal;
@@ -561,14 +563,6 @@ button:hover {
   }
 }
 
-
-
-#bloqueCarrito.oculto {
-  display: none;
-}
-#bloqueCarrito.mostrar {
-  display: block; /* o flex/grid, según tu diseño */
-}
 
 /* ================================
    📋 FORMULARIO DE COMPRA CLIENTE
