@@ -191,25 +191,35 @@ header h1 {
 }
 
 
+
 .contenedor-img {
   width: 100%;
-  aspect-ratio: 4 / 3; /* puedes ajustar según necesites */
-  overflow: hidden;
-  margin-bottom: 1rem;
   background-color: #f8f8f8;
   border-radius: 12px;
-  padding: 0;
-  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contenedor-img img.main-img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;  /* ✅ NO recorta la imagen */
-  object-position: center; /* Centrada */
+  height: auto;
+  object-fit: contain; /* muestra toda la imagen sin recorte */
   display: block;
 }
 
+
+@media (max-width: 600px) {
+  .contenedor-img {
+    aspect-ratio: 1 / 1; /* cuadrado en móviles si quieres, o quita esto si prefieres mantener 4/3 */
+  }
+
+  .contenedor-img img.main-img {
+    object-fit: contain;
+  }
+}
 
 
 
