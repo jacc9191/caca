@@ -426,7 +426,8 @@ button:hover {
   margin: 1.2rem auto 0;
   background: #000;
   color: #fff;
-  border-radius: 14px;
+  border-radius: var(--borde-radius);
+
   max-width: 280px;
   box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
 }
@@ -729,15 +730,7 @@ body.dark-mode button {
 /* ===================================
    📱 MEDIA QUERIES
 =================================== */
-@media (max-width: 768px) {
-  .producto {
-    width: 90%;
-  }
 
-  .carrusel-scroll > * {
-    flex: 0 0 30%;
-  }
-}
 
 @media (max-width: 480px) {
   header {
