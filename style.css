@@ -174,13 +174,14 @@ header h1 {
 /* ===================================
    🛍 PRODUCTOS
 =================================== */
+/* 📦 Contenedor de producto */
 .producto {
   background-color: #fff;
   border-radius: 16px;
   box-shadow: var(--sombra-suave);
-  max-width: 320px;
-  padding: 1.5rem;
-  margin: 1rem auto;
+  max-width: 480px;
+  padding: 0.1rem;
+  margin: 0.1rem auto;
   text-align: center;
   transition: var(--trans);
 }
@@ -190,32 +191,32 @@ header h1 {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-
-/* 📦 Contenedor de la imagen */
 .contenedor-img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* O ajusta a 1 / 1 si quieres cuadrado */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 12px;
-  margin-bottom: 1rem;
   background-color: #f8f8f8;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 🖼 Imagen principal */
 .contenedor-img img.main-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Muestra toda la imagen sin recortar */
+  object-fit: contain;
   object-position: center;
 }
-
-
 @media (max-width: 600px) {
+  .producto {
+    width: 100%;
+    max-width: 100%;
+    margin: 0.5rem auto;
+  }
+
   .contenedor-img {
-    aspect-ratio: 1 / 1; /* cuadrado en móviles si quieres, o quita esto si prefieres mantener 4/3 */
+    aspect-ratio: 1 / 1; /* mantiene forma cuadrada */
   }
 
   .contenedor-img img.main-img {
@@ -223,14 +224,8 @@ header h1 {
   }
 }
 
-@media (max-width: 480px) {
-  .contenedor-img {
-    height: 200px; /* o 180px según lo que veas mejor */
-  }
-}
 
-
-
+/* 🧠 Tipografía y estilos del producto */
 .producto h2 {
   font-size: clamp(1.2rem, 2vw, 1.4rem);
   margin: 0.5rem 0;
@@ -249,16 +244,9 @@ header h1 {
   font-size: 1.15rem;
 }
 
-@media (max-width: 480px) {
-  .contenedor-productos {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
 
-  .producto {
-    margin: 0 auto;
-  }
-}
+
+
 /* ===================================
    🏷 DESCRIPCIÓN DEL PRODUCTO
    =================================== */
